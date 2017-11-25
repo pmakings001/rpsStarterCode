@@ -39,19 +39,19 @@ $(document).ready(function() {
         )
     {
         console.log("Computer wins");
-        $("#result").append("<br> Computer wins </br>");
+        $("#result").html("<br> Computer wins </br>");
     }
     else if (userChoice === "rock" && computerChoice === "scissors" ||
             userChoice === "paper" && computerChoice === "rock" ||
             userChoice === "scissors" && computerChoice === "paper")
     {
         console.log("User Wins");
-        $("#result").append("<br> User wins </br>");
+        $("#result").html("<br> User wins </br>");
     }
      else 
     {
         console.log("Draw")
-        $("#result").append("<br> Draw <br>");
+        $("#result").html("<br> Draw <br>");
     }
 };
 
@@ -62,7 +62,7 @@ $(document).ready(function() {
     userChoice = "rock";
     computerChoice = generateComputerChoice();
     pickWinner(userChoice, computerChoice);
-    $("#computer-choice").append("<br>" + computerChoice + "</br>");
+    $("#computer-choice").html("<br>" + computerChoice + "</br>");
 }
     );
     $("#scissors").click(function()
@@ -70,7 +70,7 @@ $(document).ready(function() {
     userChoice = "scissors";
     computerChoice = generateComputerChoice();
     pickWinner(userChoice, computerChoice);
-    $("#computer-choice").append("<br>" + computerChoice + "</br>");
+    $("#computer-choice").html("<br>" + computerChoice + "</br>");
 }
     );    
     $("#paper").click(function()
@@ -78,7 +78,7 @@ $(document).ready(function() {
     userChoice = "paper";
     computerChoice = generateComputerChoice();
     pickWinner(userChoice, computerChoice);
-    $("#computer-choice").append("<br>" + computerChoice + "</br>");
+    $("#computer-choice").html("<br>" + computerChoice + "</br>");
 }
     );
     // Task 3: To be completed AFTER this game functions in the console.
